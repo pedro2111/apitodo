@@ -5,13 +5,14 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Tarefa;
 use Illuminate\Contracts\Validation\Validators;
+use DB;
 
 date_default_timezone_set('America/Sao_Paulo');
 class TarefaController extends Controller
 {
     public function index()
     {
-        return Tarefa::all();
+        return Tarefa::orderBy('id','desc')->get();
     }
 
     public function store(Request $request)
@@ -72,5 +73,16 @@ class TarefaController extends Controller
         ->get();        
 
         return $tarefa;
+    }
+    public function getSearch($descricao) {
+        
+        $tarefa = DB::table('tarefa')
+                ->select(DB::raw("*"))
+                ->where('descricao', 'like', '%'.$descricao.'%')
+                ->orderBy('id','desc')
+                ->get();
+        
+        return $tarefa;
+        
     }
 }
