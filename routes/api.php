@@ -14,6 +14,7 @@ Route::delete("tarefa/{id}", "TarefaController@delete");
 
 Route::get("sistema", "SistemaController@index");
 Route::get("sistema/{id}", "SistemaController@getById");
+Route::get("sistema/search/{nome}", "SistemaController@getSearchSistema");
 Route::patch("sistema/{id}", "SistemaController@update");
 Route::post("sistema", "SistemaController@store");
 Route::delete("sistema/{id}", "SistemaController@delete");
