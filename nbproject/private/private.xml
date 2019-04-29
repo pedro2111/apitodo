@@ -6,6 +6,8 @@
             <file>file:/C:/xampp/htdocs/todo/app/Http/Controllers/TarefaController.php</file>
             <file>file:/C:/xampp/htdocs/todo/app/Tarefa.php</file>
             <file>file:/C:/xampp/htdocs/todo/routes/api.php</file>
+            <file>file:/C:/xampp/htdocs/todo/app/Http/Controllers/SistemaController.php</file>
+            <file>file:/C:/xampp/htdocs/todo/app/Sistema.php</file>
         </group>
     </open-files>
 </project-private>

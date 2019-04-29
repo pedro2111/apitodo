@@ -8,6 +8,7 @@ Route::patch("tarefa/{id}", "TarefaController@update");
 Route::get("tarefa/done/{id}", "TarefaController@done");
 Route::get("tarefa/search/{descricao}", "TarefaController@getSearch");
 Route::get("tarefadone", "TarefaController@getDone");
+Route::get("tarefasistema", "TarefaController@getTarefaSistema");
 Route::post("tarefa", "TarefaController@store");
 Route::delete("tarefa/{id}", "TarefaController@delete");
 

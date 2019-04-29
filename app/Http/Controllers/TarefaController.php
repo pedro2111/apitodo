@@ -87,6 +87,15 @@ class TarefaController extends Controller {
 
         return $tarefa;
     }
+    public function getTarefaSistema(){
+        $TarefaSistema = DB::table('tarefa')
+                ->join('sistema', 'tarefa.id_sistema', '=', 'sistema.id')
+                ->select('sistema.nome as sistema','tarefa.nome','tarefa.descricao','tarefa.status','tarefa.created_at')
+                ->orderBy('tarefa.created_at','desc')
+                ->get();
+        
+        return $TarefaSistema;
+    }
    
 
 }
